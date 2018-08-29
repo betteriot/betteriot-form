@@ -1,6 +1,6 @@
 # IoT Mark Form UX
 
-A first mockup of the form copy.
+A first version of the form copy.
 
 ## Opening page:
 The open #iotmark assessment form
