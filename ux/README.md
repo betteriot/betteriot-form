@@ -2,7 +2,7 @@
 
 A first version of the form copy.
 
-## Opening page:
+## Opening page
 The open #iotmark assessment form
 
 Try our easy form to assess how your you’re doing on your journey to make a good, secure and ethical connected product. This will take you about 15 minutes. 
