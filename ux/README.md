@@ -253,7 +253,7 @@ Ideally you would provide a link on your website to visual or multilingual docum
 * Decided against
 * Not sure 
 
-# Do you supply spare parts on request during the lifecycle of the product?
+### Do you supply spare parts on request during the lifecycle of the product?
 Ideally you would provide a form on your website that a user can fill in to request these parts. Information about this service should be included as part of the packaging or online marketing materials. 
 
 * Yes
