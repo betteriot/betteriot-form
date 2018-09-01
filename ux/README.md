@@ -2,6 +2,8 @@
 
 A first version of the form copy.
 
+CC BY-SA iotmark.org
+
 ## Opening page
 The open #iotmark assessment form
 
