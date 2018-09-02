@@ -112,7 +112,7 @@
   ]
 },
 {
-  "name": "privacy",
+  "name": "Privacy",
   "note": "What does GDPR compliance mean for IoT? Connected products often collect data through device sensors or by logging user commands. The distinction between personal user data and environmental data becomes fluent. All data is assumed to be personal.",
   "questions": [
     {

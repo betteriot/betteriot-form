@@ -46,7 +46,7 @@ img#logo {
 
 section#footer {
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
 }
@@ -67,6 +67,7 @@ div#progress {
 span.progress-section {
     display: inline-block;
     font-size: 1.1vw;
+    text-transform: lowercase;
 }
 
 span.progress-section.active {
