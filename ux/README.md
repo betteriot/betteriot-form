@@ -9,7 +9,7 @@ The open #iotmark assessment form
 
 Try our easy form to assess how your you’re doing on your journey to make a good, secure and ethical connected product. This will take you about 15 minutes. 
 
-We assume that your team or company makes and sells connected products that have a software and hardware component. Check out our definitions for some of the terms we use here (link to https://github.com/openiotmark/iotmark-principles#roles) 
+We assume that your team or company makes and sells connected products that have a software and hardware component. Check out our definitions for some of the terms we use (link to https://github.com/openiotmark/iotmark-principles#roles)
 
 Get started!
 
@@ -199,15 +199,7 @@ Ideally you keep a publicly available auditable trail of firmware revisions on a
 * Decided against
 * Not sure 
 
-### Do you make sure to implement security practices in your business processes?
-This might mean demonstrating personal training, regular security assessment, security requirements for your suppliers or threat intelligence. You would also ideally provide a link to a security@yourcompany.com email address for your customers with adequate turn around.
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Have you implemented ‘security by design’ during the development of your connected product?
+### Have you implemented 'security by design' during the development of your connected product?
 This might mean defining security requirements, implementing strong cryptographic policies, provide security support via over the air updates, integrate the security of dependencies, and secure firmware updates. (Link to a good resource?)
 
 * Yes
@@ -215,7 +207,7 @@ This might mean defining security requirements, implementing strong cryptographi
 * Decided against
 * Not sure 
 
-### Have you implemented a ‘security by default’ approach for your connected product?
+### Have you implemented a 'security by default' approach for your connected product?
 This would mean that users need to change the password on first use of the product. It also implies that the produce doesn’t use unencrypted communication nor does it use unnecessary open services.
 
 * Yes

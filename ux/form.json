@@ -17,22 +17,22 @@
   "note": "Interoperability is about making it technically possible to use devices, backends and clients of the vendor with those of a third party. Interoperability does not imply unrestricted access to user data.",
   "questions": [
     {
-      "question": "Do you allow third parties to connect clients to its backend?",
+      "question": "Do you allow third parties to connect clients to your product’s backend?",
       "assessment": "The vendor submits a link to public documentation of the client-specific backend API.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you grant third party clients the same functional scope on the backend as its own clients?",
+      "question": "Do you grant third party clients the same functional scope on your backend as your own clients?",
       "assessment": "The assessor collects complaints, including screenshots or video \"proof\", filed by users or third parties.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you allow third parties to connect devices to its backend?",
+      "question": "Do you allow third parties to connect your devices to their backend?",
       "assessment": "The vendor submits a link to public documentation of the device-specific backend API.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you allow third parties to communicate directly with its devices, without going through the backend?",
+      "question": "Do you allow third parties to communicate directly with your devices, without going through the backend?",
       "assessment": "The vendor submits a link to public documentation of the device communication interface.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
@@ -58,7 +58,7 @@
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Have you published client source code under an open source license?",
+      "question": "Have you published the client source code under an open source license?",
       "assessment": "The vendor submits a link to a public source code repository or ZIP file. The source code is licensed with MIT License or Apache 2 or GPLv3 or at least a license compliant with the Open Source Definition.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
@@ -69,17 +69,17 @@
   "note": "",
   "questions": [
     {
-      "question": "Do you allow users to turn off the connection from the device to the backend?",
+      "question": "Do you allow your users to turn off the connection from the device to the backend?",
       "assessment": "The vendor submits a link to user documentation explaining how to turn off the connection from the device to the backend.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you allow users to transfer ownership of the device?",
+      "question": "Do you allow your users to transfer ownership of the device to someone else?",
       "assessment": "The vendor submits a link to public user documentation explaining how to transfer ownership of a device to another user.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you prevent new user from accessing previous user's data when ownership of the device is transferred?",
+      "question": "Do you actively prevent new users from accessing previous user's data when ownership of the device is transferred?",
       "assessment": "The vendor submits a link to video proof. The assessor collects user complaints.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
@@ -90,22 +90,22 @@
   "note": "",
   "questions": [
     {
-      "question": "Do you make explicit the legal implications of substantially changing device usage?",
+      "question": "Do you make explicit to your users the legal implications of substantially changing the way they use the device?",
       "assessment": "The vendor submits a link to public user documentation explaining the (secondary) legal implications of changing how the device is used, or taking it offline.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you make explicit the expected duration of the terms of service?",
+      "question": "Do you make explicit to your user the expected duration of your terms of service?",
       "assessment": "The vendor submits a link to the terms of service which have to include a \"best before\" expiration date.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you ask permission from users before changing the terms of service?",
+      "question": "Do you make sure to ask permission from users before changing the terms of service?",
       "assessment": "The vendor submits proof that terms & conditions changes are communicated to users and their permission is sought explicitly.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you inform users about substantial firmware upgrades?",
+      "question": "Do you make sure to inform your users about substantial firmware upgrades?",
       "assessment": "The vendor submits a link to a blog or feed or other public, auditable trail of firmware revisions.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
@@ -121,7 +121,7 @@
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you make clear to users how the collected data is used?",
+      "question": "Do you make it clear to your users how data that is collected is used?",
       "assessment": "The vendor submits a link to its public privacy policy explaining how the collected data is used.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
@@ -131,12 +131,12 @@
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you allow users to migrate their collected data to another backend?",
+      "question": "Do you allow your users to migrate their collected data to another backend?",
       "assessment": "The vendor submits a link to public documentation explaining how to export collected data, and a link to the respective section in terms & conditions.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you allow users to easily opt out of direct marketing based on their collected data?",
+      "question": "Do you allow your users to easily opt-out of direct marketing based on their collected data?",
       "assessment": "The vendor submits a link to public documentation explaining how to opt out of direct marketing based on the collected data.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
@@ -151,7 +151,7 @@
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you allow users to stop automated decisions being made, if there are personal legal or significant consequences?",
+      "question": "Do you allow users to stop automated decisions being made about them through their collected data especially if there are personal, legal or significant consequences?",
       "assessment": "The vendor submits a link to public documentation explaining how to stop automated decisions and get a human to re-evaluate the decision.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
@@ -162,17 +162,17 @@
   "note": "",
   "questions": [
     {
-      "question": "Have you implemented 'security by design' for the connected product?",
+      "question": "Have you implemented 'security by design' during the development of your connected product?",
       "assessment": "Define security requirements, strong crypto, provide security support via OTA update (see 5), integrate the security of dependencies (see 5), secure firmware.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Have you implemented 'security by default' for the connected product?",
+      "question": "Have you implemented a 'security by default' approach for your connected product?",
       "assessment": "Users need to change the password at first run, no unencrypted communication, no unneeded open service.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Have you assessed the risk of well known IoT threats on the connected product?",
+      "question": "Have you assessed the risk of well known threats on your connected product?",
       "assessment": "The vendor submits a risk assessment of the security of the device and its backend (OWASP Top 10, secure backend).",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
@@ -183,17 +183,17 @@
   "note": "",
   "questions": [
     {
-      "question": "Do you allow users to factory reset the device?",
+      "question": "Do you allow your users to reset the device (also known as a factory reset)?",
       "assessment": "The vendor submits a link to public user documentation showing how to factory reset the device.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you actively avoid degrading or changing the core functionality of the connected product over its lifetime?",
+      "question": "Do you actively avoid degrading or change the core functionality of the connected product over its lifetime?",
       "assessment": "Core functionality is declared once by the vendor and backed by submitting a link to public marketing materials. Compliance with the principle can be verified on audit or by users at any time by comparing the current functionality with the declared core functionality.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
-      "question": "Do you offer documentation for any parts that a user can repair using common tools and skills?",
+      "question": "Do you offer documentation for parts that a user can repair using common tools and skills?",
       "assessment": "The vendor submits a link to public user documentation including a visual overview of how repairs can be done. Design files should be made available if the piece is expected to be 3D-printed.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
