@@ -15,70 +15,6 @@ Get started!
 
 ## Questions
 
-### Do you allow users to access their collected data, free of charge?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you would offer your customers a link explaining to them how to export collected data, and you will include this in your terms and conditions.
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you make it clear to your users how data that is collected is used?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on a dedicated privacy policy. 
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you allow users to delete their collected data?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you allow your users to migrate their collected data to another backend?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you allow your users to easily opt-out of direct marketing based on their collected data?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you allow users to restrict the use of their collected data?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you allow users to update their collected data?
-Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
-### Do you allow users to stop automated decisions being made about them through their collected data especially if there are personal, legal or significant consequences?
-Ideally you have a link on your website to help a user stop automated decisions and get a customer support representative (not an automated process) to re-evaluate the decision.
-
-* Yes
-* Not yet
-* Decided against
-* Not sure 
-
 ### Do you allow third parties to connect clients to your product’s backend?
 Ideally you will have developed a client-specific backend API and have published documentation on how to use it on your website.
 
@@ -193,6 +129,70 @@ Ideally you would make sure to communicate any changes in terms & conditions to 
 
 ### Do you make sure to inform your users about substantial firmware upgrades?
 Ideally you keep a publicly available auditable trail of firmware revisions on a blog, RSS feed or other. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow users to access their collected data, free of charge?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you would offer your customers a link explaining to them how to export collected data, and you will include this in your terms and conditions.
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you make it clear to your users how data that is collected is used?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on a dedicated privacy policy. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow users to delete their collected data?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow your users to migrate their collected data to another backend?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow your users to easily opt-out of direct marketing based on their collected data?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow users to restrict the use of their collected data?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow users to update their collected data?
+Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website. 
+
+* Yes
+* Not yet
+* Decided against
+* Not sure 
+
+### Do you allow users to stop automated decisions being made about them through their collected data especially if there are personal, legal or significant consequences?
+Ideally you have a link on your website to help a user stop automated decisions and get a customer support representative (not an automated process) to re-evaluate the decision.
 
 * Yes
 * Not yet
