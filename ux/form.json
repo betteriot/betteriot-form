@@ -206,9 +206,10 @@
 },
 {
   "name": "Thanks for filling in the assessment form",
-  "note": "It looks like you have XX questions which you’re not sure about. If you’d like to get some help with these, open #iotmark offers a free 1h consultancy call with a one of our community members who is best placed to help you. After that, you’re free to work with them on a consultancy basis.<br><br> Tell us a little about yourself and we’ll put you in touch with the right person.",
+  "note": "It looks like you have <score></score> questions which you’re not sure about. If you’d like to get some help with these, open #iotmark offers a free 1h consultancy call with a one of our community members who is best placed to help you. After that, you’re free to work with them on a consultancy basis.<br><br> Tell us a little about yourself and we’ll put you in touch with the right person.",
   "questions": [{
     "multi": true,
+    "event": "onSurveyComplete",
     "submit_label": "Let's go with it",
     "subquestions": []
   }]

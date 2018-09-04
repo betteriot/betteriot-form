@@ -11,7 +11,7 @@
 </head>
 <body>
 <section id="header">
-    <img id="logo" src="images/logo.svg" class="go-forward">
+    <img id="logo" src="images/logo.svg" class="dbg-go-forward">
     #iotmark
 </section>
 <screen>
@@ -63,8 +63,10 @@ function renderQuestion(s, question_idx) {
             }
             view.append(options);
         }
-        view.append("<div class='option go-forward'>"+q.submit_label+"</div>");
+        view.append("<div class='option modal blue'>"+q.submit_label+"</div>");
         $("div.progress-counter").html("");
+
+        if(q.event) window[q.event](); // invoking whatever handler (todo: proper delegates)
     } else {
         $("div.progress-counter").html(question_idx+1 + " of " + s.questions.length);
         view.append("<h1>" +q.question+"</h1>");
@@ -94,8 +96,17 @@ function locateSurvey(iter) {
     return SURVEY_END;
 }
 
-function iterateSurvey() {
-    var sq_iter = locateSurvey(++SURVEY_ITER);
+function iterateSurvey(increment) {
+    // save state of the previous section
+    if(SURVEY_ITER > -1 && increment > 0) {
+        var prev_iter = locateSurvey(SURVEY_ITER);
+        var q = SURVEY[prev_iter.s].questions[prev_iter.q];
+        q.answer = $("div.option.checked").text();
+    }
+
+    // now, onto the next section
+    SURVEY_ITER += increment;
+    var sq_iter = locateSurvey(SURVEY_ITER);
     $("span.progress-section").removeClass("active");
 
     if(sq_iter.s == 0) {
@@ -133,6 +144,16 @@ function iterateSurvey() {
     }
 }
 
+function onSurveyComplete() {
+    var not_sure_count = 0;
+    for(var i = 0; i < SURVEY.length; i++) {
+        for(var q = 0; q < SURVEY[i].questions.length; q++) {
+            if(SURVEY[i].questions[q].answer == "Not sure") not_sure_count ++;
+        }
+    }
+    $("score").html(not_sure_count);
+}
+
 $(document).ready(function() {
     fetch(FORM_JSON_URL)
     .then(function(response) {
@@ -148,25 +169,22 @@ $(document).ready(function() {
             progress_bar.append("<span class='progress-section'>"+SURVEY[i]["name"]+"</span>");
         progress_bar.append("<span class='progress-section'></span>"); // empty span for padding
 
-        iterateSurvey();
+        iterateSurvey(1);
     });
 
     $(document).on("click", "div.option", function() {
+        $("section#controls").css("display", "inline-block");
         $(this).parent().children().removeClass("checked");
         $(this).addClass("checked");
-        if($(this).hasClass("modal")) iterateSurvey();
+        if($(this).hasClass("modal")) iterateSurvey(1);
     });
 
-    $(document).on("click", ".go-forward", function() {
-        $("section#controls").css("display", "inline-block");
-        iterateSurvey();
+    $(document).on("click", ".dbg-go-forward", function() {
+        iterateSurvey(1);
     });
 
     $(document).on("click", ".go-back", function() {
-        if(SURVEY_ITER > 0) {
-            SURVEY_ITER -= 2;
-            iterateSurvey();
-        }
+        iterateSurvey(-1);
     });
 });
 

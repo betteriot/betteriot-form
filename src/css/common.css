@@ -123,14 +123,14 @@ div.go-back {
 
 }
 
-div.go-forward {
+div.modal.blue {
     border: 0px solid #81BBBE !important;
     color: white !important;
     font-weight: bold;
     padding-left: 2vw !important;
     padding-right: 2vw !important;
     background-color: #81BBBE !important;
-    margin-top: 2vw !important;
+    margin-top: 0.3vw !important;
 }
 
 section#question {
@@ -172,6 +172,8 @@ section#question div.option {
     margin-right: 0.3vw;
     margin-top: 10px;
     cursor: pointer;
+    text-align: center;
+    min-width: 5vw;
 }
 
 section#question div.option.checked {
@@ -189,7 +191,6 @@ section#question input.option {
     border: 0;
     border-bottom: 3px solid black;
     outline: none;
-    font
 }
 
 section#question div.options {
