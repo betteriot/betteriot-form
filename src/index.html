@@ -8,10 +8,16 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link media="handheld, only screen and (max-width: 720px), only screen and (max-device-width: 854px)" href="css/mobile.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_DQi4HA0H6itI2xwoIPppI");
+   })();
+</script>
 </head>
 <body>
 <section id="header">
-    <img id="logo" src="images/logo.jpg" class="dbg-go-forward">
+    <img id="logo" src="images/logo.jpg" class="dbg-go-forward noselect">
     #iotmark
 </section>
 <screen>
@@ -41,6 +47,7 @@ var PROGRESS_SKIP_FIRST_N;
 var PROGRESS_SKIP_LAST_N;
 var SURVEY_ITER = -1;
 var SURVEY_END = { "s": -1, "q": -1 };
+var FORM_ID = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
 function renderQuestion(s, question_idx) {
     var q = s.questions[question_idx];
@@ -53,7 +60,7 @@ function renderQuestion(s, question_idx) {
         for(var i = 0; i < q.subquestions.length; i++) {
             var qq = q.subquestions[i];
             view.append("<h2>"+qq.question+"</h2>");
-            var options = $("<div class='options'></div><br>");
+            var options = $("<div class='options noselect'></div><br>");
             if(qq.options) {
                 for(var j = 0; j < qq.options.length; j++) {
                     options.append("<div class='option'>" + qq.options[j] + "</div>");
@@ -64,7 +71,7 @@ function renderQuestion(s, question_idx) {
             view.append(options);
         }
         view.append("<div class='option modal blue'>"+q.submit_label+"</div>");
-        $("div.progress-counter").html("");
+        $("div.progress-counter").html(""); // dirty-dirty
 
         if(q.event) window[q.event](); // invoking whatever handler (todo: proper delegates)
     } else {
@@ -72,7 +79,7 @@ function renderQuestion(s, question_idx) {
         view.append("<h1>" +q.question+"</h1>");
         if(q.assessment) view.append("<div class='assessment'>"+q.assessment+"</div>");
         
-        var options = $("<div class='options'></div>");
+        var options = $("<div class='options noselect'></div>");
         if(q.options) {
             for(var i = 0; i < q.options.length; i++) {
                 options.append("<div class='option modal'>" + q.options[i] + "</div>");
@@ -101,7 +108,20 @@ function iterateSurvey(increment) {
     if(SURVEY_ITER > -1 && increment > 0) {
         var prev_iter = locateSurvey(SURVEY_ITER);
         var q = SURVEY[prev_iter.s].questions[prev_iter.q];
-        q.answer = $("div.option.checked").text();
+        if(q.multi) {
+            var view = $("section#question");
+            for(var i = 0; i < q.subquestions.length; i++) {
+                var qq = q.subquestions[i];
+                qq_answers = view.find("h2:nth("+i+")").next("div.options");
+                if(qq.options) {
+                    qq.answer = qq_answers.find("div.option.checked").text();
+                } else {
+                    qq.answer = qq_answers.find("input").val();
+                }
+            }
+        } else {
+            q.answer = $("div.option.checked").text();
+        }
     }
 
     // now, onto the next section
@@ -122,6 +142,16 @@ function iterateSurvey(increment) {
         view.empty();
         view.append("<h1>Thanks! We will contact you soon!</h1>");
         view.append("<div class='note'>For now, feel free to check additional resources <a href='https://github.com/openiotmark/iotmark-principles/wiki'>here</a>.</div>");
+
+        var bio = "";
+        var kyc = SURVEY[SURVEY.length-1].questions[0];
+        for(var q = 0; q < kyc.subquestions.length; q++) {
+            if(kyc.subquestions[q].answer && kyc.subquestions[q].question)
+                bio += "<b>"+kyc.subquestions[q].answer+"</b> ("+kyc.subquestions[q].question+")<br>";
+        }
+
+        console.log(bio);
+        sendEmail(bio);
         return;
     }
 
@@ -144,14 +174,41 @@ function iterateSurvey(increment) {
     }
 }
 
+function sendEmail(msg) {
+    var data = {
+        service_id: 'default_service',
+        template_id: 'template_1dVu6hLG',
+        user_id: 'user_DQi4HA0H6itI2xwoIPppI',
+        template_params: {
+            'message_id': FORM_ID,
+            'message_html': msg
+        }
+    };
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json'
+    }).done(function() {
+        console.log('Email is sent!');
+    }).fail(function(error) {
+        console.log('Oops... ' + JSON.stringify(error));
+    });
+}
+
 function onSurveyComplete() {
     var not_sure_count = 0;
+    var result = "";
     for(var i = 0; i < SURVEY.length; i++) {
         for(var q = 0; q < SURVEY[i].questions.length; q++) {
-            if(SURVEY[i].questions[q].answer == "Not sure") not_sure_count ++;
+            if(SURVEY[i].questions[q].answer == "not sure") not_sure_count ++;
+            if(SURVEY[i].questions[q].answer && SURVEY[i].questions[q].question)
+                result += "<b>"+SURVEY[i].questions[q].answer+"</b> ("+SURVEY[i].questions[q].question+")<br>";
         }
     }
     $("score").html(not_sure_count);
+    console.log(result);
+    sendEmail(result);
 }
 
 $(document).ready(function() {
