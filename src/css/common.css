@@ -25,7 +25,7 @@ div, section, input {
     display: block;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 1.2vw;
+    font-size: 1.2vmax;
 }
 
 .noselect {
@@ -137,10 +137,10 @@ div.modal.blue {
     border: 0px solid #81BBBE !important;
     color: white !important;
     font-weight: normal;
-    padding-left: 2vw !important;
-    padding-right: 2vw !important;
+    padding-left: 2vmax !important;
+    padding-right: 2vmax !important;
     background-color: black !important;
-    margin-top: 0.3vw !important;
+    margin-top: 0.3vmax !important;
 }
 
 section#question {
@@ -153,21 +153,21 @@ section#question {
 }
 
 section#question h1 {
-    font-size: 1.65vw;
-    line-height: 2vw;
+    font-size: 1.65vmax;
+    line-height: 2vmax;
     font-weight: 400;
 }
 
 section#question h2 {
-    font-size: 1.2vw;
-    line-height: 2vw;
+    font-size: 1.2vmax;
+    line-height: 2vmax;
     font-weight: 400;
 }
 
 section#question div.assessment, section#question div.note {
-    font-size: 1vw;
-    line-height: 1.35vw;
-    margin-bottom: 1.5vw;
+    font-size: 1vmax;
+    line-height: 1.35vmax;
+    margin-bottom: 1.5vmax;
 }
 
 section#question div.options {
@@ -178,12 +178,12 @@ section#question div.option {
     border: 1px solid #999;
     color: black;
     border-radius: 2px;
-    padding: 0.5vw 0.5vw 0.5vw 0.5vw;
-    margin-right: 0.3vw;
+    padding: 0.5vmax 0.5vmax 0.5vmax 0.5vmax;
+    margin-right: 0.3vmax;
     margin-top: 10px;
     cursor: pointer;
     text-align: center;
-    min-width: 5vw;
+    min-width: 5vmax;
 }
 
 section#question div.option.checked {
@@ -194,7 +194,7 @@ section#question div.option.checked {
 
 section#question h2 {
     display: inline-block;
-    margin-right: 1.5vw;
+    margin-right: 1.5vmax;
 }
 
 section#question input.option {

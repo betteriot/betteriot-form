@@ -223,7 +223,7 @@ $(document).ready(function() {
 
         var progress_bar = $("section#footer > div#progress");
         for(var i = PROGRESS_SKIP_FIRST_N; i < SURVEY.length-PROGRESS_SKIP_LAST_N; i++)
-            progress_bar.append("<span class='progress-section'>"+SURVEY[i]["name"]+"</span>");
+            progress_bar.append("<span class='progress-section' data-label='"+SURVEY[i]["name"]+"'>"+SURVEY[i]["name"]+"</span>");
         progress_bar.append("<span class='progress-section'></span>"); // empty span for padding
 
         iterateSurvey(1);
