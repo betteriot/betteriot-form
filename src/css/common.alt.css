@@ -126,10 +126,10 @@ div.go-back {
 div.modal.blue {
     border: 0px solid #81BBBE !important;
     color: white !important;
-    font-weight: normal;
+    font-weight: bold;
     padding-left: 2vw !important;
     padding-right: 2vw !important;
-    background-color: black !important;
+    background-color: #81BBBE !important;
     margin-top: 0.3vw !important;
 }
 
