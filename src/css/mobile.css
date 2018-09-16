@@ -1,3 +1,6 @@
+section#header {
+    font-size: 0 !important;
+}
 
 div#progress {
     width: 93vw;
@@ -24,6 +27,7 @@ span.progress-section.active:before {
 
 div.progress-counter {
     font-size: 2vmax !important;
+    margin-top: -0.4vmax !important;
 }
 
 div.go-back {
@@ -31,7 +35,46 @@ div.go-back {
     height: 2vmax !important;
 }
 
+section#header {
+    padding-top: 2.7vmax;
+}
+
 section#controls {
-    right: 6.66vmax !important;
-    top: 7vmax !important;
+    right: 6.66vw !important;
+    top: 6vmax !important;
+}
+
+div#progress-indicator img {
+    display: none;
+}
+
+section#question h1 {
+    font-size: 3vmax;
+    line-height: 4vmax;
+    font-weight: 500;
+}
+
+section#question h2 {
+    font-size: 2vmax;
+    line-height: 3vmax;
+    font-weight: 400;
+}
+
+section#question div.assessment, section#question div.note {
+    font-size: 2vmax;
+    line-height: 3vmax;
+    margin-bottom: 1.5vmax;
+}
+
+section#question div.option {
+    font-size: 2vmax;
+    border: 1px solid black;
+    padding: 1vmax 1vmax 1vmax 1vmax;
+    margin-right: 0.6vmax;
+    margin-top: 2vmax;
+    min-width: 4vmax;
+}
+
+img#logo {
+    height: 9.4vmax !important;
 }

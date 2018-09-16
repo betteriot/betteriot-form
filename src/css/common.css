@@ -115,8 +115,8 @@ section#controls {
 
 div.progress-counter {
     display: inline-block;
-    margin-right: 2vw;
-    margin-top: -0.2vw;
+    margin-right: 2vmax;
+    margin-top: -0.2vmax;
     vertical-align: top;
 }
 div.go-back {
@@ -168,9 +168,6 @@ section#question div.assessment, section#question div.note {
     font-size: 1vmax;
     line-height: 1.35vmax;
     margin-bottom: 1.5vmax;
-}
-
-section#question div.options {
 }
 
 section#question div.option {
