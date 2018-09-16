@@ -210,7 +210,7 @@
   "questions": [{
     "multi": true,
     "event": "onSurveyComplete",
-    "submit_label": "Let's go with it",
+    "submit_label": "Apply for consultation",
     "subquestions": []
   }]
 },
