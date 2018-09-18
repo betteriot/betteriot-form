@@ -18,7 +18,7 @@
   "questions": [
     {
       "question": "Do you allow third parties to connect clients to your product’s backend?",
-      "assessment": "The vendor submits a link to public documentation of the client-specific backend API.",
+      "assessment": "Ideally you will have developed a client-specific backend API and have published documentation on how to use it on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
@@ -28,12 +28,12 @@
     },
     {
       "question": "Do you allow third parties to connect your devices to their backend?",
-      "assessment": "The vendor submits a link to public documentation of the device-specific backend API.",
+      "assessment": "Ideally you will have developed a device-specific backend API and have published documentation on how to use it on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow third parties to communicate directly with your devices, without going through the backend?",
-      "assessment": "The vendor submits a link to public documentation of the device communication interface.",
+      "assessment": "Ideally you will have developed a device communication interface and have published documentation on how to use it on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -44,22 +44,22 @@
   "questions": [
     {
       "question": "Have you published the device firmware source code under an open source license?",
-      "assessment": "The vendor submits a link to a public source code repository or ZIP file. The source code is licensed with MIT License or Apache 2 or GPLv3 or at least a license compliant with the Open Source Definition.",
+      "assessment": "Ideally you will have licensed your firmware’s source code using the MIT License, Apache 2, GPLv3 or at least a license compliant with the <a href='https://opensource.org/osd'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you published the device hardware designs under an open hardware license?",
-      "assessment": "The vendor submits a link to a public repository or ZIP file. Hardware design files may include but are not limited to schema files, PCB layouts, and any other materials that would support the recreation of the product by the user or a third party. The license is compliant with the Open Source Hardware Definition.",
+      "assessment": "Ideally you will share hardware design files (schema files, PCB layouts, and any other materials that would support the recreation of the product by the user or a third party). You should also license this in compliance with the <a href='https://www.oshwa.org/definition/'>Open Source Hardware Definition</a>.Those files would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you published the backend source code under an open source license?",
-      "assessment": "The vendor submits a link to a public repository or ZIP file. The source code is licensed with Apache 2 or AGPLv3 or at least a license compliant with the Open Source Definition.",
+      "assessment": "Ideally you will have licensed your firmware’s source code using the Apache 2,  AGPLv3 or at least a license compliant with the <a href='https://opensource.org/osd'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you published the client source code under an open source license?",
-      "assessment": "The vendor submits a link to a public source code repository or ZIP file. The source code is licensed with MIT License or Apache 2 or GPLv3 or at least a license compliant with the Open Source Definition.",
+      "assessment": "Ideally you will have licensed your firmware’s source code using the MIT License, Apache 2, GPLv3 or at least a license compliant with the <a href='https://opensource.org/osd'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -70,17 +70,17 @@
   "questions": [
     {
       "question": "Do you allow your users to turn off the connection from the device to the backend?",
-      "assessment": "The vendor submits a link to user documentation explaining how to turn off the connection from the device to the backend.",
+      "assessment": "Ideally you would provide a link on your website to documentation that explains how to turn off the connection from the device to the backend.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow your users to transfer ownership of the device to someone else?",
-      "assessment": "The vendor submits a link to public user documentation explaining how to transfer ownership of a device to another user.",
+      "assessment": "Ideally you would provide a link on your website to documentation that explains how to transfer ownership of a device to another user.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you actively prevent new users from accessing previous user's data when ownership of the device is transferred?",
-      "assessment": "The vendor submits a link to video proof. The assessor collects user complaints.",
+      "assessment": "Ideally you would provide a link on your website to documentation that explains how to do this. This might be done in a number of ways but a hard reset button on your device might be one way of doing this.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -91,22 +91,22 @@
   "questions": [
     {
       "question": "Do you make explicit to your users the legal implications of substantially changing the way they use the device?",
-      "assessment": "The vendor submits a link to public user documentation explaining the (secondary) legal implications of changing how the device is used, or taking it offline.",
+      "assessment": "Ideally you would provide a link on your website to documentation that explains the secondary legal implications of changing how the device is used, or diconnecting it.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you make explicit to your user the expected duration of your terms of service?",
-      "assessment": "The vendor submits a link to the terms of service which have to include a \"best before\" expiration date.",
+      "assessment": "Ideally you would provide a link on your website the terms of service which have to include a \"best before\" expiration date.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you make sure to ask permission from users before changing the terms of service?",
-      "assessment": "The vendor submits proof that terms & conditions changes are communicated to users and their permission is sought explicitly.",
+      "assessment": "Ideally you would make sure to communicate any changes in terms & conditions to users and document their explicit agreement with these changes.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you make sure to inform your users about substantial firmware upgrades?",
-      "assessment": "The vendor submits a link to a blog or feed or other public, auditable trail of firmware revisions.",
+      "assessment": "Ideally you keep a publicly available auditable trail of firmware revisions on a blog, RSS feed or other.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -117,42 +117,42 @@
   "questions": [
     {
       "question": "Do you allow users to access their collected data, free of charge?",
-      "assessment": "The vendor submits a link to public documentation explaining how to export collected data, and a link to the respective section in terms and conditions.",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you would offer your customers a link explaining to them how to export collected data, and you will include this in your terms and conditions.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you make it clear to your users how data that is collected is used?",
-      "assessment": "The vendor submits a link to its public privacy policy explaining how the collected data is used.",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on a dedicated privacy policy.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow users to delete their collected data?",
-      "assessment": "The vendor submits a link to public documentation explaining how to delete collected data, to \"be forgotten\".",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow your users to migrate their collected data to another backend?",
-      "assessment": "The vendor submits a link to public documentation explaining how to export collected data, and a link to the respective section in terms & conditions.",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow your users to easily opt-out of direct marketing based on their collected data?",
-      "assessment": "The vendor submits a link to public documentation explaining how to opt out of direct marketing based on the collected data.",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow users to restrict the use of their collected data?",
-      "assessment": "The vendor submits a link to public documentation explaining how to restrict the use of the collected data.",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow users to update their collected data?",
-      "assessment": "The vendor submits a link to public documentation explaining how to update the collected data.",
+      "assessment": "Part of the compliance with the European Commission’s 2018 General Data Protection Act makes you liable for a fine if you don’t do this for your European customers. Ideally you offer details on how to do this on a link on your website.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you allow users to stop automated decisions being made about them through their collected data especially if there are personal, legal or significant consequences?",
-      "assessment": "The vendor submits a link to public documentation explaining how to stop automated decisions and get a human to re-evaluate the decision.",
+      "assessment": "Ideally you have a link on your website to help a user stop automated decisions and get a customer support representative (not an automated process) to re-evaluate the decision.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -163,17 +163,17 @@
   "questions": [
     {
       "question": "Have you implemented 'security by design' during the development of your connected product?",
-      "assessment": "Define security requirements, strong crypto, provide security support via OTA update (see 5), integrate the security of dependencies (see 5), secure firmware.",
+      "assessment": "This might mean defining security requirements, implementing strong cryptographic policies, provide security support via over the air updates, integrate the security of dependencies, and secure firmware updates.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you implemented a 'security by default' approach for your connected product?",
-      "assessment": "Users need to change the password at first run, no unencrypted communication, no unneeded open service.",
+      "assessment": "This would mean that users need to change the password on first use of the product. It also implies that the produce doesn’t use unencrypted communication nor does it use unnecessary open services.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you assessed the risk of well known threats on your connected product?",
-      "assessment": "The vendor submits a risk assessment of the security of the device and its backend (OWASP Top 10, secure backend).",
+      "assessment": "You would fill in and publish a risk assessment of the security of the device and its backend. We recommend using the <a href='https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project'>framework</a> published by OWASP",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -184,22 +184,22 @@
   "questions": [
     {
       "question": "Do you allow your users to reset the device (also known as a factory reset)?",
-      "assessment": "The vendor submits a link to public user documentation showing how to factory reset the device.",
+      "assessment": "Ideally you would provide a link on your website to documentation that explains how to reset the product, either with a reset button, or on the digital user interface.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you actively avoid degrading or change the core functionality of the connected product over its lifetime?",
-      "assessment": "Core functionality is declared once by the vendor and backed by submitting a link to public marketing materials. Compliance with the principle can be verified on audit or by users at any time by comparing the current functionality with the declared core functionality.",
+      "assessment": "By core functionality we mean the functionality that is declared in your public marketing materials when the customer purchases it. We encourage you not to degrade the use of this functionality through changes in firmware or remotely bricking the produce remotely.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you offer documentation for parts that a user can repair using common tools and skills?",
-      "assessment": "The vendor submits a link to public user documentation including a visual overview of how repairs can be done. Design files should be made available if the piece is expected to be 3D-printed.",
+      "assessment": "Ideally you would provide a link on your website to visual or multilingual documentation that explains how repairs can be done. If applicable, 3D printed design files in .stl format should be made available for download.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Do you supply spare parts on request during the lifecycle of the product?",
-      "assessment": "A clear and accessible form that a user can fill in to request these parts should be included as part of the packaging or online presence of the vendor.",
+      "assessment": "Ideally you would provide a form on your website that a user can fill in to request these parts. Information about this service should be included as part of the packaging or online marketing materials.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
