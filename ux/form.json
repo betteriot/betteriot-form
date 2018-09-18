@@ -44,22 +44,22 @@
   "questions": [
     {
       "question": "Have you published the device firmware source code under an open source license?",
-      "assessment": "Ideally you will have licensed your firmware’s source code using the MIT License, Apache 2, GPLv3 or at least a license compliant with the <a href='https://opensource.org/osd'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
+      "assessment": "Ideally you will have licensed your firmware’s source code using the MIT License, Apache 2, GPLv3 or at least a license compliant with the <a href='https://opensource.org/osd' target='_blank'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you published the device hardware designs under an open hardware license?",
-      "assessment": "Ideally you will share hardware design files (schema files, PCB layouts, and any other materials that would support the recreation of the product by the user or a third party). You should also license this in compliance with the <a href='https://www.oshwa.org/definition/'>Open Source Hardware Definition</a>.Those files would be posted on a public source code repository or available as a downloadable .zip file.",
+      "assessment": "Ideally you will share hardware design files (schema files, PCB layouts, and any other materials that would support the recreation of the product by the user or a third party). You should also license this in compliance with the <a href='https://www.oshwa.org/definition/' target='_blank'>Open Source Hardware Definition</a>.Those files would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you published the backend source code under an open source license?",
-      "assessment": "Ideally you will have licensed your firmware’s source code using the Apache 2,  AGPLv3 or at least a license compliant with the <a href='https://opensource.org/osd'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
+      "assessment": "Ideally you will have licensed your firmware’s source code using the Apache 2,  AGPLv3 or at least a license compliant with the <a href='https://opensource.org/osd' target='_blank'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
       "question": "Have you published the client source code under an open source license?",
-      "assessment": "Ideally you will have licensed your firmware’s source code using the MIT License, Apache 2, GPLv3 or at least a license compliant with the <a href='https://opensource.org/osd'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
+      "assessment": "Ideally you will have licensed your firmware’s source code using the MIT License, Apache 2, GPLv3 or at least a license compliant with the <a href='https://opensource.org/osd' target='_blank'>2007 Open Source Definition</a>. That code would be posted on a public source code repository or available as a downloadable .zip file.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
@@ -173,7 +173,7 @@
     },
     {
       "question": "Have you assessed the risk of well known threats on your connected product?",
-      "assessment": "You would fill in and publish a risk assessment of the security of the device and its backend. We recommend using the <a href='https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project'>framework</a> published by OWASP.",
+      "assessment": "You would fill in and publish a risk assessment of the security of the device and its backend. We recommend using the <a href='https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project' target='_blank'>framework</a> published by OWASP.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
