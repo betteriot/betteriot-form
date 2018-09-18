@@ -23,7 +23,7 @@
     },
     {
       "question": "Do you grant third party clients the same functional scope on your backend as your own clients?",
-      "assessment": "The assessor collects complaints, including screenshots or video \"proof\", filed by users or third parties.",
+      "assessment": "You might think about how to prove that the functionality of the product using someone else’s back end works as well as your own. This might entail filming the product working with both and posting it online on your developer documentation.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     },
     {
