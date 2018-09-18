@@ -210,7 +210,7 @@ function onSurveyComplete() {
     var result = "";
     for(var i = 0; i < SURVEY.length; i++) {
         for(var q = 0; q < SURVEY[i].questions.length; q++) {
-            if(SURVEY[i].questions[q].answer == "not sure") not_sure_count ++;
+            if(SURVEY[i].questions[q].answer == "Not sure") not_sure_count ++;
             if(SURVEY[i].questions[q].answer && SURVEY[i].questions[q].question)
                 result += "<b>"+SURVEY[i].questions[q].answer+"</b> ("+SURVEY[i].questions[q].question+")<br>";
         }
