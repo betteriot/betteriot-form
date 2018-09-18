@@ -173,7 +173,7 @@
     },
     {
       "question": "Have you assessed the risk of well known threats on your connected product?",
-      "assessment": "You would fill in and publish a risk assessment of the security of the device and its backend. We recommend using the <a href='https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project'>framework</a> published by OWASP",
+      "assessment": "You would fill in and publish a risk assessment of the security of the device and its backend. We recommend using the <a href='https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project'>framework</a> published by OWASP.",
       "options": [ "Yes", "Not yet", "Decided against", "Not sure" ]
     }
   ]
