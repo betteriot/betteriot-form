@@ -203,3 +203,25 @@ section#question input.option {
 section#question div.options {
     display: inline-block;
 }
+
+div.option.cc_positive {
+    background: #ddff89 !important;
+    border: 0px !important;
+}
+
+div.option.cc_promise {
+    background: #faffb1 !important;
+    border: 0px !important;
+}
+
+div.option.cc_negative {
+    background: #CC0051 !important;
+    color: white !important;
+    border: 0px !important;
+}
+
+div.option.cc_neutral {
+    background: aliceblue !important;
+    border: 0px !important;
+}
+

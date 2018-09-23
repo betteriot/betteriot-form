@@ -58,6 +58,14 @@ var SURVEY_ITER = -1;
 var SURVEY_END = { "s": -1, "q": -1 };
 var FORM_ID = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
+function colorCoding(text) {
+    if(text == "Yes") return 'cc_positive';
+    if(text == "Decided against") return 'cc_negative';
+    if(text == "Not yet") return 'cc_promise';
+    if(text == "Not sure") return 'cc_neutral';
+    return '';
+}
+
 function renderQuestion(s, question_idx) {
     var q = s.questions[question_idx];
     var view = $("section#question");
@@ -91,7 +99,8 @@ function renderQuestion(s, question_idx) {
         var options = $("<div class='options noselect'></div>");
         if(q.options) {
             for(var i = 0; i < q.options.length; i++) {
-                options.append("<div class='option modal'>" + q.options[i] + "</div>");
+                var color_coding = colorCoding(q.options[i]);
+                options.append("<div class='option modal "+color_coding+"'>" + q.options[i] + "</div>");
             }
             view.append(options);
         } else {
