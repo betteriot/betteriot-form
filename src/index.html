@@ -140,6 +140,8 @@ function iterateSurvey(increment) {
 
     if(sq_iter.s == 0) {
         $("section#controls").css("display", "none");
+    } else {
+        $("section#controls").css("display", "inline-block");
     }
     if(sq_iter.s >= SURVEY.length-PROGRESS_SKIP_LAST_N || sq_iter == SURVEY_END) {
         $("div#progress-indicator > img").css("display", "none");
@@ -220,6 +222,14 @@ function onSurveyComplete() {
     sendEmail(result);
 }
 
+window.addEventListener('popstate', function(e) {
+    if(e.state.session != FORM_ID || e.state.iter == SURVEY_ITER) {
+        history.replaceState({ "iter": SURVEY_ITER, "session": FORM_ID }, null, document.location.href);
+        return; // invalid session
+    }
+    iterateSurvey(e.state.iter - SURVEY_ITER);
+});
+
 $(document).ready(function() {
     fetch(FORM_JSON_URL)
     .then(function(response) {
@@ -236,13 +246,16 @@ $(document).ready(function() {
         progress_bar.append("<span class='progress-section'></span>"); // empty span for padding
 
         iterateSurvey(1);
+        history.replaceState({ "iter": SURVEY_ITER, "session": FORM_ID }, null, document.location.href);
     });
 
     $(document).on("click", "div.option", function() {
-        $("section#controls").css("display", "inline-block");
         $(this).parent().children().removeClass("checked");
         $(this).addClass("checked");
-        if($(this).hasClass("modal")) iterateSurvey(1);
+        if($(this).hasClass("modal")) {
+            iterateSurvey(1);
+            history.pushState({ "iter": SURVEY_ITER, "session": FORM_ID }, null, document.location.href);
+        }
     });
 
     $(document).on("click", ".dbg-go-forward", function() {
@@ -250,7 +263,7 @@ $(document).ready(function() {
     });
 
     $(document).on("click", ".go-back", function() {
-        iterateSurvey(-1);
+        window.history.back();
     });
 });
 
