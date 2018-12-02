@@ -4,8 +4,8 @@
 "survey": [
 
 {
-  "name": "The open #iotmark assessment form",
-  "note": "Try our easy form to assess how your you’re doing on your journey to make a good, secure and ethical connected product. This will take you about 15 minutes.<br><br> We assume that your team or company makes and sells connected products that have a software and hardware component. Check out our definitions for some of the terms we use <a href='https://github.com/openiotmark/iotmark-principles#roles' target='_blank'>here</a>.",
+  "name": "The open #betteriot assessment tool",
+  "note": "Try our easy form to assess how your you’re doing on your journey to make a good, secure and ethical connected product. This will take you about 15 minutes.<br><br> We assume that your team or company makes and sells connected products that have a software and hardware component. Check out our definitions for some of the terms we use <a href='https://github.com/betteriot/betteriot-principles#roles' target='_blank'>here</a>.",
   "questions": [{
     "multi": true,
     "submit_label": "Get started",
@@ -206,7 +206,7 @@
 },
 {
   "name": "Thanks for filling in the assessment form",
-  "note": "It looks like you have <score></score> questions which you’re not sure about. If you’d like to get some help with these, open #iotmark offers a free 1h consultancy call with a one of our community members who is best placed to help you. After that, you’re free to work with them on a consultancy basis.<br><br> Tell us a little about yourself and we’ll put you in touch with the right person.",
+  "note": "It looks like you have <score></score> questions which you’re not sure about. If you’d like to get some help with these, #betteriot offers a free 1h consultancy call with a one of our community members who is best placed to help you. After that, you’re free to work with them on a consultancy basis.<br><br> Tell us a little about yourself and we’ll put you in touch with the right person.",
   "questions": [{
     "multi": true,
     "event": "onSurveyComplete",
