@@ -4,7 +4,7 @@
 "survey": [
 
 {
-  "name": "The open #betteriot assessment tool",
+  "name": "#betteriot assessment tool",
   "note": "Try our easy form to assess how your you’re doing on your journey to make a good, secure and ethical connected product. This will take you about 15 minutes.<br><br> We assume that your team or company makes and sells connected products that have a software and hardware component. Check out our definitions for some of the terms we use <a href='https://github.com/betteriot/betteriot-principles#roles' target='_blank'>here</a>.",
   "questions": [{
     "multi": true,
