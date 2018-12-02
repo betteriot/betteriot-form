@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>#iotmark</title>
+<title>#betteriot</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="apple-touch-icon" sizes="180x180" href="/iotmark/images/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/iotmark/images/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/iotmark/images/favicons/favicon-16x16.png">
-<link rel="manifest" href="/iotmark/images/favicons/site.webmanifest">
-<link rel="mask-icon" href="/iotmark/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/iotmark/images/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/betteriot/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/betteriot/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/betteriot/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/betteriot/images/favicons/site.webmanifest">
+<link rel="mask-icon" href="/betteriot/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/betteriot/images/favicons/favicon.ico">
 <meta name="msapplication-TileColor" content="#603cba">
-<meta name="msapplication-config" content="/iotmark/images/favicons/browserconfig.xml">
+<meta name="msapplication-config" content="/betteriot/images/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link media="handheld, only screen and (max-width: 479px), only screen and (max-device-width: 479px)" href="css/mobile.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/pdf.css" type="text/css" />
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
 <script type="text/javascript">
    (function(){
@@ -27,7 +28,7 @@
 <body>
 <section id="header">
     <img id="logo" src="images/logo.jpg" class="dbg-go-forward noselect">
-    #iotmark
+    #betteriot
 </section>
 <screen>
     <section id="question">
@@ -46,12 +47,68 @@
         </div>
     </div>
 </section>
+<div id="pdf-container">
+</div>
 </body>
 <script src="scripts/utils/jquery-3.3.1.min.js"></script>
+<script src='scripts/utils/jspdf.min.js'></script>
 <script>
+var base64Img = null;
+imgToBase64('https://empathy.fyi/betteriot/images/logo.jpg', function(base64) {
+    base64Img = base64; 
+});
+
+pdf_margins = { top: 70, bottom: 40, left: 30, width: 550 };
+
+function renderPDF() {
+    var pdf = new jsPDF('p', 'pt', 'a4');
+    pdf.fromHTML(document.getElementById('pdf-container'), pdf_margins.left, pdf_margins.top,
+                 { width: pdf_margins.width }, function(dispose) {
+                     headerFooterFormatting(pdf, pdf.internal.getNumberOfPages());
+                 }, pdf_margins);
+    
+    $("a#download_pdf").attr("href", pdf.output('datauristring'));
+}
+
+function headerFooterFormatting(doc, totalPages) {
+    doc.setFont('Helvetica');
+    doc.setFontSize(18);
+    for(var i = totalPages; i >= 1; i--) {
+        doc.setPage(i);
+        doc.setFontSize(20);
+        doc.setTextColor(40);
+        doc.setFontStyle('normal');
+        if (base64Img) {
+           doc.addImage(base64Img, 'JPEG', pdf_margins.left, 10, 40,40);        
+        }
+        doc.text("#betteriot assessment tool", pdf_margins.left + 50, 40 );
+        doc.setLineCap(2);
+        doc.line(3, 70, pdf_margins.width + 43,70); // horizontal line
+        doc.page++;
+    }
+};
+
+function imgToBase64(url, callback, imgVariable) {
+    if (!window.FileReader) {
+        callback(null);
+        return;
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = 'blob';
+    xhr.onload = function() {
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            imgVariable = reader.result.replace('text/xml', 'image/jpeg');
+            callback(imgVariable);
+        };
+        reader.readAsDataURL(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.send();
+};
 
 var SURVEY;
-var FORM_JSON_URL = 'https://raw.githubusercontent.com/openiotmark/iotmark-form/master/ux/form.json';
+var FORM_JSON_URL = 'https://raw.githubusercontent.com/betteriot/betteriot-form/master/ux/form.json';
 var PROGRESS_SKIP_FIRST_N;
 var PROGRESS_SKIP_LAST_N;
 var SURVEY_ITER = -1;
@@ -161,7 +218,7 @@ function iterateSurvey(increment) {
         var view = $("section#question");
         view.empty();
         view.append("<h1>Thanks! We will contact you soon!</h1>");
-        view.append("<div class='note'>For now, feel free to check additional resources <a href='https://github.com/openiotmark/iotmark-principles/wiki'>here</a>.</div>");
+        view.append("<div class='note'>For now, feel free to check additional resources <a href='https://github.com/betteriot/betteriot-principles/wiki'>here</a>.</div>");
 
         var bio = "";
         var kyc = SURVEY[SURVEY.length-1].questions[0];
@@ -217,18 +274,41 @@ function sendEmail(msg) {
 }
 
 function onSurveyComplete() {
+    $("div#pdf-container").empty(); // old answers
+
+    var yes_bucket = $('<span><h2 class="heading">Answered \'Yes\'</h2></span>');
+    var no_bucket = $('<span><h2 class="heading">Answered \'Not yet\'</h2></span>');
+    var against_bucket = $('<span><h2 class="heading">Answered \'Decided against\'</h2></span>');
+    var notsure_bucket = $('<span><h2 class="heading">Answered \'Not sure\'</h2></span>');
+
     var not_sure_count = 0;
     var result = "";
     for(var i = 0; i < SURVEY.length; i++) {
         for(var q = 0; q < SURVEY[i].questions.length; q++) {
-            if(SURVEY[i].questions[q].answer == "Not sure") not_sure_count ++;
-            if(SURVEY[i].questions[q].answer && SURVEY[i].questions[q].question)
+            var answer = SURVEY[i].questions[q].answer;
+            if(answer == "Not sure") not_sure_count ++;
+            if(answer && SURVEY[i].questions[q].question) {
                 result += "<b>"+SURVEY[i].questions[q].answer+"</b> ("+SURVEY[i].questions[q].question+")<br>";
+
+                var bucket;
+                if(answer == "Yes") bucket = yes_bucket;
+                else if(answer == "Not yet")  bucket = no_bucket;
+                else if(answer == "Decided against")  bucket = against_bucket;
+                else bucket = notsure_bucket;
+                bucket.append("<p>"+SURVEY[i].questions[q].question.replace(/[^\x00-\x7F]/g, "")+"</p>");
+            }
         }
     }
     $("score").html(not_sure_count);
     console.log(result);
     sendEmail(result);
+
+    $("section#question").append("<a id='download_pdf' href='#' download='betteriot.pdf'>Save your answers</a>");
+    if(yes_bucket.find("p").length > 0) $("div#pdf-container").append(yes_bucket);
+    if(no_bucket.find("p").length > 0) $("div#pdf-container").append(no_bucket);
+    if(against_bucket.find("p").length > 0) $("div#pdf-container").append(against_bucket);
+    if(notsure_bucket.find("p").length > 0) $("div#pdf-container").append(notsure_bucket);
+    renderPDF();
 }
 
 window.addEventListener('popstate', function(e) {
